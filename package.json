@@ -1,0 +1,11 @@
+{
+  "name": "srez_demo",
+  "version": "1.0.0",
+  "description": "Input image, run bat and output image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chew Wen Xiang",
+  "license": "ISC"
+}

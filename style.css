@@ -1,0 +1,71 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	background: lightgrey;
+	-webkit-app-region: drag;
+}
+
+div {
+	text-align: center;
+	font-family: calibri;
+	color: black;
+}
+
+#content: {
+	display: flex;
+	height: 1rem;
+	flex-direction: column;
+	align-items: center;
+	color: grey;	
+}
+
+.title {
+	padding: 10px 20px;
+	font-size: 40px;
+	color: white;
+}
+
+.option {
+	padding: 10px 20px; 
+	font-size: 40px;
+	cursor: pointer;
+	color: white;
+	-webkit-app-region: no-drag;
+}
+
+.option:hover {
+	background: red;
+}
+
+
+
+div#mainContent {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	background: #00BCD4;
+}
+
+div#filePicker{
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	cursor: pointer;
+	font-size: 1
+}
+
+
+
+div#content {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>SREZ Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="./assets/angular/angular.js"></script>
+	<script src="./assets/angular/angular-route.js"></script>
+	
+</head>
+
+<body>
+
+	<!-- <input type="button" id="btn-input-tab" value="Input"> -->
+
+
+	<div id="content">
+
+		<header ng-controller="headCtrl">
+
+			<div class="option" ng-click="close()">&#x2715;</div>
+			<div class="option" ng-click="maximize()">&#x1f5d6;</div>
+			<div class="option" ng-click="minimize()">&#x1f5d5;</div>
+			<!-- <h1>Image Super Resolution</h1> -->
+			<div class="title">Image Super Resolution</div>
+			
+		</header>
+
+		<div id="mainContent" ng-view></div>
+			<li class="list-of-results">
+				<div class="row">
+					<div class="col-md-6">
+						<img src='assets/picture/default1.jpeg' id="resizeimagepath" style="width: 160px; height:160px margin:10px">
+					</div>
+					<div class="col-md-6">
+						<img src='assets/picture/default2.jpeg' id="predictimagepath" style="width: 160px; height:160px margin:10px">
+					</div>
+				</div>
+			</li>
+		</div>
+	
+</body>
+<script src="./assets/js/script.js"></script>
+<!-- <script type="text/javascript">
+	// Filesystem module
+	const fs = require('fs');
+	// Dialog module
+	const {dialog} = require("electron").remote;
+
+	document.getElementById("btn-input-tab").addEventListener("click", () = {
+		let content = "Hello"
+	}, false)
+
+</script> -->
+
+</html>
