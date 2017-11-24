@@ -28,6 +28,8 @@ function boot(){
 		win = null
 	})
 
+
+
 	// globalShortcut.register('CommandOrControl+1', () => {
 	// 	win.isMaximized() ? win.unmaximize() : win.maximize()
 
@@ -46,44 +48,26 @@ function boot(){
 
 // const resizeimagepath = new Tray('/Users/somebody/images/icon.png')
 
-var fs = require('fs');
-// var files = fs.readdirSync('/assets/photos/');
 
-// var resizeimagepath = '/assets/pciture/cat-pet-animal-domestic-104827.jpeg';
-var predictimagepath = '/assets/pciture/cat-pet-animal-domestic-104827.jpeg';
+function getImages() {
+	let imgtypes =['.bmp',/*'.ico',*/'.gif','.jpg','.jpeg','.png']
+	let folder = "DEMO/predict/"
 
+	console.log('hi')
 
-// var x = document.getElementById("resizeimagepath");
-// var x = document.createElement("IMG");
+	let fs = require('fs');
+	let fls = fs.readdirSync(folder)
+	let defaultImageName=null
+	let defaultImageNum=null
 
+	for(var key in fls){
+		var val = fls[key]
+		var ext = path.extname(val).toLowerCase()
+		var fn = path.basename(val)
+	}
+	console.log(fn)
 
-fs.readdir('/DEMO/predict', function(err, files) {
-    files
-		.filter(function(file) { return file.substr(-4) === '.png'; })
-		.forEach(inspectfile(file) )
-//          .forEach(function(file) { fs.readFile(file, 'utf-8', function(err, contents) { inspectFile(contents); }); });
-});
-
-
-function inspectFile(contents) {
-    files
-		.filter(function(file) {return file.substr(-13) === 'predicted.png'})
-		.forEach(function(file) {resizeimagepath.push(file)} )
-	console.log(files)
-} 
-
-
-
-
-
-// function inspectFile(contents) {
-//     if (contents.indexOf('data-template="home"') != -1) {
-//         // do something
-//     }
-// } 
- 
-
-
+}
 
 
 

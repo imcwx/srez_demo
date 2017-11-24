@@ -2,7 +2,27 @@
 
 
 <!-- DISPLAY -->
-<br>
-<button type="button" class="btn btn-info btn-md" id="filePicker" ng-click="pickFile()">Select File</button>	
-<br>
-<button type="button" class="btn btn-info btn-md" id="runPredict" ng-click="runPredict()">Predict</button>	
+<div class="row">
+	<button type="button" class="btn btn-info btn-md" id="filePicker" ng-click="pickFile()">Select File</button>	
+	<button type="button" class="btn btn-info btn-md" id="runPredict" ng-click="runPredict()">Predict</button>
+
+	<p id="demo"></p>
+
+
+</div>
+
+<div class="row">
+
+	<img src='assets/images/default1.jpeg' id="resizeimagepath" style="width: 160px; height:160px margin:10px">
+	<img src='assets/images/default2.jpeg' id="predictimagepath" style="width: 160px; height:160px margin:10px">
+
+	<div id=grid class="grid">&nbsp;</div>
+
+	<div id="images">
+		<div id="preview">
+			<img ng-src="{{imagePath}}">
+		</div>
+	</div>
+
+</div>
+
